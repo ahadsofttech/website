@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AHAD Softtech Pvt Ltd</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="AHAD Logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a class="active" href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Contact Banner -->
+
+    <section class="contact-banner">
+
+        <h1>Contact AHAD Softtech Pvt Ltd</h1>
+
+        <p>
+            We'd love to hear from you. Reach out to discuss your business,
+            technology requirements or career opportunities.
+        </p>
+
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+
+            <h2>Get In Touch</h2>
+
+            <p>
+                Our team is always ready to assist you with professional
+                technology and business solutions.
+            </p>
+
+            <div class="info-box">
+                <h3>📍 Office</h3>
+                <p>
+                    EWSHWARI, NO 87/A, RTO Road, <br>
+                    3rd Stage, Devanur Extension, ,<br>
+                    Rajiv Nagar, Mysore – 570019, Karnataka, India.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>📞 Phone</h3>
+                <p>+91 9538268786</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📧 Email</h3>
+                <p>careers.ahadsofttech@gmail.com</p>
+            </div>
+
+            <div class="info-box">
+                <h3>🕒 Operating Hours</h3>
+                <p>24/7 Service Operations</p>
+                <p>Rotational Shifts</p>
+            </div>
+
+        </div>
+
+        <!-- Contact Form -->
+
+        <div class="contact-form">
+
+            <h2>Send Us a Message</h2>
+
+            <form onsubmit="sendToWhatsApp(); return false;">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+
+                <input type="email" id="email" placeholder="Email Address" required>
+
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+
+                <input type="text" id="subject" placeholder="Subject" required>
+
+                <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="btn-primary">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Social -->
+
+    <section class="social-section">
+
+        <h2>Follow AHAD Softtech</h2>
+
+        <p>Stay connected through our social media platforms.</p>
+
+        <div class="social-links">
+
+            <a href="https://www.instagram.com/ahad_softtech/" target="_blank" rel="noopener noreferrer"
+                class="social-btn">
+                Instagram
+            </a>
+
+            <a href="https://www.linkedin.com/in/ahad-softtech-private-limited-716154426/" target="_blank"
+                rel="noopener noreferrer" class="social-btn">
+                LinkedIn
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61593762242389" target="_blank" rel="noopener noreferrer"
+                class="social-btn">
+                Facebook
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 AHAD Softtech Pvt Ltd.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script>
+        function sendToWhatsApp() {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+
+            var whatsappNumber = "919538268786";
+
+            var text =
+                "📩 New Contact Form Submission\n\n" +
+                "👤 Full Name: " + name + "\n" +
+                "📧 Email: " + email + "\n" +
+                "📱 Phone: " + phone + "\n" +
+                "📝 Subject: " + subject + "\n\n" +
+                "💬 Message:\n" + message;
+
+            var url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
