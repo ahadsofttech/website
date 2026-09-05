@@ -228,12 +228,13 @@ function initBackToTop () {
    ========================================================================== */
 function initActiveNavLinks () {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('header nav a, #mobile-drawer a');
+    const navLinks = document.querySelectorAll('header nav a, #mobile-drawer a, #mobile-bottom-bar a');
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href === currentPath || (currentPath === '' && href === 'index.html')) {
             link.classList.add('text-brand-600', 'font-semibold');
+            link.classList.remove('text-slate-500');
         }
     });
 }

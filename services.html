@@ -64,12 +64,11 @@
 </head>
 
 <body
-    class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen">
+    class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen pb-20 lg:pb-0">
 
-
-<!-- ================= STICKY HEADER / NAVIGATION ================= -->
+<!-- ================= STICKY HEADER / NAVIGATION (DESKTOP ONLY) ================= -->
 <header id="main-header"
-    class="sticky top-0 z-50 bg-white transition-all duration-300 py-4 border-b border-slate-100 shadow-sm">
+    class="hidden lg:block sticky top-0 z-50 bg-white transition-all duration-300 py-4 border-b border-slate-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="index.html"
             class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-600 rounded-lg"
@@ -584,10 +583,54 @@
 
     <!-- Floating Back to Top Button -->
     <button id="back-to-top" type="button"
-        class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-brand-600 text-white shadow-xl hover:bg-brand-700 transition duration-300 opacity-0 invisible translate-y-4 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        class="fixed bottom-20 sm:bottom-24 lg:bottom-6 right-4 sm:right-6 z-40 p-3 rounded-full bg-brand-600 text-white shadow-xl hover:bg-brand-700 transition duration-300 opacity-0 invisible translate-y-4 focus:outline-none focus:ring-2 focus:ring-brand-500"
         aria-label="Scroll back to top of page">
         <i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>
     </button>
+<!-- ================= FLOATING MOBILE / TABLET BOTTOM NAVIGATION BAR ================= -->
+<nav id="mobile-bottom-bar"
+    class="fixed bottom-4 inset-x-4 max-w-sm sm:max-w-md mx-auto z-50 bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.15)] border border-slate-100 py-2.5 px-3 flex items-center justify-around lg:hidden transition-all duration-300"
+    aria-label="Mobile Bottom Navigation">
+    <!-- 1. Home -->
+    <a href="index.html"
+        class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+        <i class="fas fa-home text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+            aria-hidden="true"></i>
+        <span class="text-[11px] font-medium leading-none">Home</span>
+    </a>
+
+    <!-- 2. Services -->
+    <a href="services.html"
+        class="flex flex-col items-center justify-center flex-1 py-1 transition group text-brand-600 font-semibold">
+        <i class="fas fa-layer-group text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+            aria-hidden="true"></i>
+        <span class="text-[11px] leading-none">Services</span>
+    </a>
+
+    <!-- 3. Careers -->
+    <a href="careers.html"
+        class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+        <i class="fas fa-briefcase text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+            aria-hidden="true"></i>
+        <span class="text-[11px] font-medium leading-none">Careers</span>
+    </a>
+
+    <!-- 4. About -->
+    <a href="about.html"
+        class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+        <i class="fas fa-circle-info text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+            aria-hidden="true"></i>
+        <span class="text-[11px] font-medium leading-none">About</span>
+    </a>
+
+    <!-- 5. Contact -->
+    <a href="contact.html"
+        class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+        <i class="fas fa-envelope text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+            aria-hidden="true"></i>
+        <span class="text-[11px] font-medium leading-none">Contact</span>
+    </a>
+</nav>
     
     <script src="js/script.js"></script>
 </body>
