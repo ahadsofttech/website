@@ -1,203 +1,650 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Careers at AHAD Softtech Pvt Ltd - Join our growing team in Mysore. Current openings in Customer Support, Technical Support, and BPO operations.">
     <title>Careers | AHAD Softtech Pvt Ltd</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            200: '#fecaca',
+                            300: '#fca5a5',
+                            400: '#f87171',
+                            500: '#ef4444',
+                            600: '#d62828',
+                            700: '#b91c1c',
+                            800: '#991b1b',
+                            900: '#7f1d1d',
+                            950: '#450a0a'
+                        },
+                        navy: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        },
+                        accent: {
+                            amber: '#f59e0b',
+                            emerald: '#10b981',
+                            sky: '#0284c7'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">
-            <img src="images/Ahad.png" alt="AHAD Logo">
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a class="active" href="careers.html">Careers</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Career Banner -->
-
-    <section class="career-banner">
-
-        <h1>Build Your Career With AHAD Softtech</h1>
-
-        <p>
-            Join our growing team and become part of an organization committed to
-            innovation, excellence and customer success.
-        </p>
-
-    </section>
-
-    <!-- Why Join Us -->
-
-    <section class="career-section">
-
-        <h2>Why Join AHAD Softtech?</h2>
-
-        <div class="career-grid">
-
-            <div class="career-box">
-                <h3>Professional Growth</h3>
-
-                <p>
-                    Continuous learning opportunities and exposure to real business projects.
-                </p>
-            </div>
-
-            <div class="career-box">
-                <h3>Friendly Work Culture</h3>
-
-                <p>
-                    A collaborative environment where every employee is respected and valued.
-                </p>
-            </div>
-
-            <div class="career-box">
-                <h3>Skill Development</h3>
-
-                <p>
-                    Enhance your technical, communication and leadership skills through regular training.
-                </p>
-            </div>
-
-            <div class="career-box">
-                <h3>Career Opportunities</h3>
-
-                <p>
-                    As a growing startup, we provide opportunities to grow with the company.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Current Openings -->
-
-    <section class="career-section">
-
-        <h2>Current Openings</h2>
-
-        <div class="career-grid">
-
-            <div class="career-box">
-                <h3>Customer Support Executive</h3>
-
-                <p>
-                    Voice & Non-Voice Process<br>
-                    Location: Mysore
-                </p>
-
-            </div>
-
-            <div class="career-box">
-
-                <h3>Technical Support Executive</h3>
-
-                <p>
-                    Customer Technical Assistance<br>
-                    Location: Mysore
-                </p>
-
-            </div>
-
-            <div class="career-box">
-
-                <h3>BPO Associate</h3>
-
-                <p>
-                    Business Process Outsourcing Operations<br>
-                    Location: Mysore
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Hiring Process -->
-
-    <section class="career-section">
-
-        <h2>Our Hiring Process</h2>
-
-        <div class="career-grid">
-
-            <div class="career-box">
-                <h3>1. Apply</h3>
-
-                <p>
-                    Send your updated resume to our official recruitment email.
-                </p>
-
-            </div>
-
-            <div class="career-box">
-
-                <h3>2. Resume Screening</h3>
-
-                <p>
-                    Our HR team reviews your profile based on the job requirements.
-                </p>
-
-            </div>
-
-            <div class="career-box">
-
-                <h3>3. Interview</h3>
-
-                <p>
-                    Qualified candidates will be invited for HR and technical discussions.
-                </p>
-
-            </div>
-
-            <div class="career-box">
-
-                <h3>4. Offer</h3>
-
-                <p>
-                    Selected candidates receive an official offer letter and onboarding details.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Apply -->
-
-    <section class="career-apply">
-
-        <h2>Ready to Join Our Team?</h2>
-
-        <p>
-
-            Take the first step towards an exciting career with AHAD Softtech Pvt Ltd.
-
-        </p>
-
-        <a href="mailto:ahadsofttech@gmail.com" class="btn-primary">
-            Apply Now
+<body
+    class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen">
+
+
+<!-- ================= STICKY HEADER / NAVIGATION ================= -->
+<header id="main-header"
+    class="sticky top-0 z-50 bg-white transition-all duration-300 py-4 border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <a href="index.html"
+            class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-600 rounded-lg"
+            aria-label="AHAD Softtech Home">
+            <img src="images/brand-logo.png" alt="AHAD Softtech Logo"
+                class="h-12 w-auto object-contain transition group-hover:scale-105">
         </a>
 
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Primary Navigation">
+            <a href="index.html"
+                class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">Home</a>
+            <a href="services.html"
+                class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">Services</a>
+            <a href="careers.html"
+                class="font-heading text-sm font-semibold text-brand-600 hover:text-brand-600 transition">Careers</a>
+            <a href="about.html"
+                class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">About Us</a>
+            <a href="contact.html"
+                class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">Contact Us</a>
+        </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    <span>Connect With Us</span>
+                    <i class="fas fa-arrow-right ml-2 text-xs" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" type="button"
+                class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition"
+                aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open Navigation Menu">
+                <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+            </button>
+            </div>
+            </header>
+
+    <!-- Mobile Drawer Backdrop -->
+    <div id="mobile-backdrop"
+        class="fixed inset-0 bg-navy-950/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"
+        aria-hidden="true"></div>
+
+    <!-- Mobile Slide-out Drawer -->
+    <aside id="mobile-drawer"
+        class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between"
+        aria-hidden="true">
+        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+            <img src="images/brand-logo.png" alt="AHAD Logo" class="h-10 w-auto">
+            <button id="mobile-close-btn" type="button"
+                class="p-2 text-slate-500 hover:text-brand-600 rounded-lg hover:bg-slate-100"
+                aria-label="Close Navigation Menu">
+                <i class="fas fa-times text-xl" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <nav class="p-6 space-y-3 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+            <a href="index.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>Home</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+            <a href="services.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>Services</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+            <a href="careers.html"
+                class="flex items-center justify-between p-3 rounded-xl bg-brand-50 text-brand-600 font-semibold font-heading">
+                <span>Careers</span>
+                <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+            </a>
+            <a href="about.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>About Us</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+            <a href="contact.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>Contact Us</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+        <div class="p-6 bg-slate-50 border-t border-slate-100 space-y-4">
+            <a href="contact.html"
+                class="w-full flex items-center justify-center py-3 px-4 rounded-xl font-medium text-white bg-brand-600 hover:bg-brand-700 shadow-md transition">
+                <span>Get in Touch</span>
+                <i class="fas fa-paper-plane ml-2 text-xs" aria-hidden="true"></i>
+            </a>
+        </div>
+        </aside>
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="relative bg-navy-950 text-white py-20 lg:py-28 overflow-hidden">
+        <svg class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" aria-hidden="true"
+            focusable="false">
+            <defs>
+                <linearGradient id="career-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#d62828" stop-opacity="0.35" />
+                    <stop offset="100%" stop-color="#020617" stop-opacity="0.9" />
+                </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#career-grad)" />
+            <circle cx="80%" cy="15%" r="220" fill="#d62828" opacity="0.15" filter="blur(60px)" />
+        </svg>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-950 border border-brand-800 text-brand-400 text-xs font-bold uppercase tracking-wider mb-6">
+                Talent & Careers
+            </div>
+            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
+                Build Your Career With AHAD Softtech
+            </h1>
+            <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+                Join our growing team and become part of an organization committed to innovation, excellence and customer
+                success.
+            </p>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10" aria-hidden="true">
+            <svg class="relative block w-full h-8 sm:h-12 text-slate-50 fill-current" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+        </section>
+
+    <!-- ================= WHY JOIN US (4 PILLARS) ================= -->
+    <section class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                    Our Culture
+                </div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+                    Why Join AHAD Softtech?
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    We nurture passion, provide world-class training, and open real pathways for leadership.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 1. Professional Growth -->
+                <div
+                    class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-lg transition duration-300 card-hover-effect reveal-on-scroll">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Professional Growth</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Continuous learning opportunities and exposure to real business projects.
+                    </p>
+                </div>
+
+                <!-- 2. Friendly Work Culture -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-lg transition duration-300 card-hover-effect reveal-on-scroll"
+                    data-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-smile" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Friendly Work Culture</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        A collaborative environment where every employee is respected and valued.
+                    </p>
+                </div>
+
+                <!-- 3. Skill Development -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-lg transition duration-300 card-hover-effect reveal-on-scroll"
+                    data-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Skill Development</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Enhance your technical, communication and leadership skills through regular training.
+                    </p>
+                </div>
+
+                <!-- 4. Career Opportunities -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-lg transition duration-300 card-hover-effect reveal-on-scroll"
+                    data-delay="300">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Career Opportunities</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        As a growing startup, we provide opportunities to grow with the company.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- ================= CURRENT OPENINGS (3 ROLES) ================= -->
+    <section class="py-20 lg:py-28 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                    Join Us Today
+                </div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+                    Current Openings
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Apply directly to our recruitment team for immediate placement in Mysore.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Role 1 -->
+                <div
+                    class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between reveal-on-scroll">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700">Full-Time</span>
+                            <span class="text-xs text-slate-500"><i class="fas fa-map-marker-alt text-brand-600 mr-1"
+                                    aria-hidden="true"></i> Mysore</span>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-navy-900 mb-3">
+                            Customer Support Executive
+                        </h3>
+                        <p class="text-slate-600 text-sm font-medium mb-2">
+                            Voice & Non-Voice Process
+                        </p>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-6">
+                            Location: Mysore, Karnataka. Deliver superior customer service via voice, chat, and email channels with
+                            empathy and speed.
+                        </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/80">
+                            <a href="mailto:info@ahadsfottech.com?subject=Application:%20Customer%20Support%20Executive"
+                                class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl font-heading text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 transition">
+                                <span>Apply via Email</span>
+                                <i class="fas fa-paper-plane ml-2 text-xs" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        </div>
+
+                <!-- Role 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between reveal-on-scroll"
+                    data-delay="100">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700">Full-Time</span>
+                            <span class="text-xs text-slate-500"><i class="fas fa-map-marker-alt text-brand-600 mr-1"
+                                    aria-hidden="true"></i> Mysore</span>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-navy-900 mb-3">
+                            Technical Support Executive
+                        </h3>
+                        <p class="text-slate-600 text-sm font-medium mb-2">
+                            Customer Technical Assistance
+                        </p>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-6">
+                            Location: Mysore, Karnataka. Provide troubleshooting, hardware/software assistance, and helpdesk ticket resolution.
+                        </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/80">
+                            <a href="mailto:info@ahadsfottech.com?subject=Application:%20Technical%20Support%20Executive"
+                                class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl font-heading text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 transition">
+                                <span>Apply via Email</span>
+                                <i class="fas fa-paper-plane ml-2 text-xs" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        </div>
+
+                <!-- Role 3 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between reveal-on-scroll"
+                    data-delay="200">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700">Full-Time</span>
+                            <span class="text-xs text-slate-500"><i class="fas fa-map-marker-alt text-brand-600 mr-1"
+                                    aria-hidden="true"></i> Mysore</span>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-navy-900 mb-3">
+                            BPO Associate
+                        </h3>
+                        <p class="text-slate-600 text-sm font-medium mb-2">
+                            Business Process Outsourcing Operations
+                        </p>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-6">
+                            Location: Mysore, Karnataka. Support business process workflows, data entry, quality documentation, and operational
+                            reporting.
+                        </p>
+                        </div>
+                    <div class="pt-6 border-t border-slate-200/80">
+                        <a href="mailto:info@ahadsfottech.com?subject=Application:%20BPO%20Associate"
+                            class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl font-heading text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 transition">
+                            <span>Apply via Email</span>
+                            <i class="fas fa-paper-plane ml-2 text-xs" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                </div>
+                </div>
+    </section>
+
+    <!-- ================= HIRING PROCESS (4 STEPS) ================= -->
+    <section class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                    Transparent Journey
+                </div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+                    Our Hiring Process
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    A simple, respectful, and transparent recruitment path.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm relative reveal-on-scroll">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg mb-4">
+                        1
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Apply</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Send your updated resume to our official recruitment email.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm relative reveal-on-scroll" data-delay="100">
+                    <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg mb-4">
+                        2
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Resume Screening</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our HR team reviews your profile based on the job requirements.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm relative reveal-on-scroll" data-delay="200">
+                    <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg mb-4">
+                        3
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Interview</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Qualified candidates will be invited for HR and technical discussions.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm relative reveal-on-scroll" data-delay="300">
+                    <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg mb-4">
+                        4
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Offer</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Selected candidates receive an official offer letter and onboarding details.
+                    </p>
+                </div>
+                </div>
+                </div>
+                </section>
+
+    <!-- ================= APPLY CTA BANNER ================= -->
+    <section class="py-20 bg-navy-950 text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+                Ready to Join Our Team?
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Take the first step towards an exciting career with AHAD Softtech Pvt Ltd.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="mailto:info@ahadsfottech.com?subject=Career%20Application%20-%20AHAD%20Softtech"
+                    class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-heading font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-0.5">
+                    <i class="fas fa-paper-plane mr-2 text-sm" aria-hidden="true"></i>
+                    <span>Apply Now via Email</span>
+                </a>
+                <a href="tel:+919538268786"
+                    class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-heading font-medium text-slate-300 bg-navy-900 hover:bg-navy-800 border border-slate-700 transition">
+                    <i class="fas fa-phone-alt mr-2 text-brand-400" aria-hidden="true"></i>
+                    <span>Call HR Desk: +91 9538268786</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= COMPREHENSIVE CORPORATE FOOTER ================= -->
+    <footer class="bg-navy-950 text-slate-400 pt-16 pb-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Footer Top: Brand & Main Directory -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12">
+                <!-- Col 1: Brand & About (5 cols on lg) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <img src="images/brand-logo.png" alt="AHAD Logo" class="h-12 w-auto brightness-0 invert">
+                    </a>
+                    <h3 class="font-heading text-base font-bold text-white">AHAD Softtech Pvt Ltd</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+                        AHAD Softtech Pvt Ltd is committed to delivering professional Business Process Outsourcing (BPO),
+                        Customer Support, Technical Support, Software Development and Digital Solutions worldwide.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.facebook.com/profile.php?id=61593762242389" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-lg bg-navy-900 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                            aria-label="Facebook Page">
+                            <i class="fab fa-facebook-f text-sm" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ahad_softtech/" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-lg bg-navy-900 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                            aria-label="Instagram Profile">
+                            <i class="fab fa-instagram text-sm" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ahad-softtech-private-limited-716154426/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-lg bg-navy-900 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                            aria-label="LinkedIn Company Page">
+                            <i class="fab fa-linkedin-in text-sm" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation (3 cols on lg) -->
+                <div class="lg:col-span-3">
+                    <h4 class="font-heading text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-400 transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Services</a></li>
+                        <li><a href="careers.html" class="hover:text-brand-400 transition">Careers</a></li>
+                        <li><a href="about.html" class="hover:text-brand-400 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Core Services (4 cols on lg) -->
+                <div class="lg:col-span-4">
+                    <h4 class="font-heading text-sm font-bold text-white uppercase tracking-wider mb-4">Core Services</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Business Process Outsourcing (BPO)</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Customer Support Services</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Technical Support & Helpdesk</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Software & Web Development</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Digital Transformation Solutions</a></li>
+                    </ul>
+                </div>
+                </div>
+
+            <!-- Horizontal Separator -->
+            <div class="border-t border-slate-800"></div>
+
+            <!-- Footer Middle: Expanded Contact Details & Embedded Map Row -->
+            <div class="py-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Left Side: Expanded Contact Info (6 cols on lg) -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-950 border border-brand-800/80 text-brand-400 text-xs font-bold uppercase tracking-wider mb-3">
+                            <i class="fas fa-headset text-xs" aria-hidden="true"></i> Connect With Our Mysore Center
+                        </span>
+                        <h4 class="font-heading text-xl sm:text-2xl font-bold text-white tracking-tight">
+                            Global Delivery Center & Headquarters
+                        </h4>
+                        <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                            Reach our operations leadership, technical teams, or recruitment desk directly. We operate 24/7 in
+                            rotational shifts to serve global clients.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <!-- Address -->
+                        <div class="sm:col-span-2 p-4 rounded-xl bg-navy-900/80 border border-slate-800/80 flex items-start gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-map-marker-alt text-base" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block mb-1">Corporate
+                                    Office</span>
+                                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                                    EWSHWARI, NO 87/A, RTO Road, 3rd Stage, Devanur Extension, Rajiv Nagar, Mysore – 570019, Karnataka,
+                                    India.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/80 flex items-start gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-phone-alt text-base" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block mb-1">Direct Line</span>
+                                <a href="tel:+919538268786" class="text-sm font-semibold text-white hover:text-brand-400 transition block">
+                                    +91 9538268786
+                                </a>
+                                <span class="text-[11px] text-emerald-400 flex items-center gap-1.5 mt-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Available 24/7
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/80 flex items-start gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-envelope text-base" aria-hidden="true"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block mb-1">Official Email</span>
+                                <a href="mailto:info@ahadsfottech.com"
+                                    class="text-xs sm:text-sm font-semibold text-white hover:text-brand-400 transition truncate block">
+                                    info@ahadsfottech.com
+                                </a>
+                                <a href="mailto:careers.ahadsofttech@gmail.com"
+                                    class="text-[11px] text-slate-400 hover:text-brand-400 transition truncate block mt-0.5">
+                                    careers.ahadsofttech@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+
+                <!-- Right Side: Embedded Google Map (6 cols on lg) -->
+                <div class="lg:col-span-6">
+                    <div class="bg-navy-900/90 p-2.5 rounded-2xl border border-slate-800 shadow-2xl relative overflow-hidden group">
+                        <div class="flex items-center justify-between px-3 py-2 text-xs border-b border-slate-800/80 mb-2">
+                            <span class="font-heading font-semibold text-slate-300 flex items-center gap-2">
+                                <i class="fas fa-compass text-brand-500" aria-hidden="true"></i> Find Us on Google Maps
+                            </span>
+                            <a href="https://maps.google.com/?q=AHAD+Softtech+Private+Limited" target="_blank" rel="noopener noreferrer"
+                                class="text-brand-400 hover:text-brand-300 text-xs font-medium inline-flex items-center gap-1 transition">
+                                <span>Get Directions</span>
+                                <i class="fas fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="w-full h-64 sm:h-72 rounded-xl overflow-hidden shadow-inner border border-slate-800/60 relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4592.787813103474!2d76.66993197569217!3d12.347657428249361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf71558a8b37ed%3A0xe5f01d77acbe688a!2sAHAD%20Softtech%20Private%20Limited!5e1!3m2!1sen!2sin!4v1788601894635!5m2!1sen!2sin"
+                                class="w-full h-full border-0" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin" title="AHAD Softtech Private Limited Google Maps Location">
+                            </iframe>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <!-- Bottom Copyright Bar -->
+                        <div
+                            class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                            <p>© 2026 AHAD Softtech Pvt Ltd. All Rights Reserved.</p>
+                            <div class="flex items-center gap-6">
+                                <span class="hover:text-slate-400 transition">Privacy Policy</span>
+                                <span class="hover:text-slate-400 transition">Terms of Service</span>
+                                <span class="hover:text-slate-400 transition">Security & Compliance</span>
+                            </div>
+                        </div>
+                        </div>
+                        </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" type="button"
+        class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-brand-600 text-white shadow-xl hover:bg-brand-700 transition duration-300 opacity-0 invisible translate-y-4 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        aria-label="Scroll back to top of page">
+        <i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
