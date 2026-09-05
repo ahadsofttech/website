@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Job Details & Specifications - AHAD Softtech Pvt Ltd, Mysore. Detailed JD, required skills, experience, and application guidelines for Customer Support, Technical Support, and BPO operations roles.">
+    <title>Job Details & Opportunities | AHAD Softtech Pvt Ltd</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            200: '#fecaca',
+                            300: '#fca5a5',
+                            400: '#f87171',
+                            500: '#ef4444',
+                            600: '#d62828',
+                            700: '#b91c1c',
+                            800: '#991b1b',
+                            900: '#7f1d1d',
+                            950: '#450a0a'
+                        },
+                        navy: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        },
+                        accent: {
+                            amber: '#f59e0b',
+                            emerald: '#10b981',
+                            sky: '#0284c7'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body
+    class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen pb-20 lg:pb-0">
+
+    <!-- ================= STICKY HEADER / NAVIGATION ================= -->
+    <header id="main-header"
+        class="hidden lg:block sticky top-0 z-50 bg-white transition-all duration-300 py-4 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="index.html"
+                class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-600 rounded-lg"
+                aria-label="AHAD Softtech Home">
+                <img src="images/brand-logo.png" alt="AHAD Softtech Logo"
+                    class="h-12 w-auto object-contain transition group-hover:scale-105">
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8" aria-label="Primary Navigation">
+                <a href="index.html"
+                    class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">Home</a>
+                <a href="services.html"
+                    class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">Services</a>
+                <a href="careers.html"
+                    class="font-heading text-sm font-semibold text-brand-600 hover:text-brand-600 transition">Careers</a>
+                <a href="about.html"
+                    class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">About Us</a>
+                <a href="contact.html"
+                    class="font-heading text-sm font-medium text-slate-700 hover:text-brand-600 transition">Contact Us</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    <span>Connect With Us</span>
+                    <i class="fas fa-arrow-right ml-2 text-xs" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" type="button"
+                class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-100 transition"
+                aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open Navigation Menu">
+                <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Backdrop -->
+    <div id="mobile-backdrop"
+        class="fixed inset-0 bg-navy-950/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"
+        aria-hidden="true"></div>
+
+    <!-- Mobile Slide-out Drawer -->
+    <aside id="mobile-drawer"
+        class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between"
+        aria-hidden="true">
+        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+            <img src="images/brand-logo.png" alt="AHAD Logo" class="h-10 w-auto">
+            <button id="mobile-close-btn" type="button"
+                class="p-2 text-slate-500 hover:text-brand-600 rounded-lg hover:bg-slate-100"
+                aria-label="Close Navigation Menu">
+                <i class="fas fa-times text-xl" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <nav class="p-6 space-y-3 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+            <a href="index.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>Home</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+            <a href="services.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>Services</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+            <a href="careers.html"
+                class="flex items-center justify-between p-3 rounded-xl bg-brand-50 text-brand-600 font-semibold font-heading">
+                <span>Careers</span>
+                <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+            </a>
+            <a href="about.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>About Us</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+            <a href="contact.html"
+                class="flex items-center justify-between p-3 rounded-xl text-slate-700 hover:bg-slate-50 font-medium font-heading transition">
+                <span>Contact Us</span>
+                <i class="fas fa-chevron-right text-xs text-slate-400" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+        <div class="p-6 bg-slate-50 border-t border-slate-100 space-y-4">
+            <a href="contact.html"
+                class="w-full flex items-center justify-center py-3 px-4 rounded-xl font-medium text-white bg-brand-600 hover:bg-brand-700 shadow-md transition">
+                <span>Get in Touch</span>
+                <i class="fas fa-paper-plane ml-2 text-xs" aria-hidden="true"></i>
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-grow">
+        <!-- ================= BREADCRUMBS & JOB HERO ================= -->
+        <section class="relative bg-gradient-to-br from-navy-950 via-navy-900 to-slate-900 text-white pt-10 pb-16 lg:pt-14 lg:pb-20 overflow-hidden">
+            <!-- Background Decorative Tech Lattice & Glow -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="jd-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.8" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#jd-grid)" />
+                </svg>
+            </div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent-sky/15 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Breadcrumb navigation -->
+                <nav class="flex items-center gap-2 text-xs sm:text-sm text-slate-400 mb-6 font-medium" aria-label="Breadcrumb">
+                    <a href="index.html" class="hover:text-white transition flex items-center gap-1.5">
+                        <i class="fas fa-home text-xs" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
+                    <i class="fas fa-chevron-right text-[10px] text-slate-600" aria-hidden="true"></i>
+                    <a href="careers.html" class="hover:text-white transition">Careers</a>
+                    <i class="fas fa-chevron-right text-[10px] text-slate-600" aria-hidden="true"></i>
+                    <span class="text-brand-400 font-semibold" id="breadcrumb-current-role">Job Details</span>
+                </nav>
+
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                    <div class="max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-600/20 text-brand-400 border border-brand-500/30 mb-4 backdrop-blur-sm">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+                            <span id="hero-badge-department">Customer Experience & Support</span>
+                        </div>
+                        <h1 id="hero-job-title" class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                            Customer Support Executive
+                        </h1>
+                        <p id="hero-job-tagline" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Voice & Non-Voice Process &bull; Full-Time Permanent Role based in Mysore, Karnataka.
+                        </p>
+
+                        <!-- Quick Meta Badges -->
+                        <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 text-xs sm:text-sm text-slate-300 font-medium">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-navy-800/80 border border-slate-700/70">
+                                <i class="fas fa-map-marker-alt text-brand-400" aria-hidden="true"></i>
+                                <span id="hero-meta-location">Mysore (On-Site)</span>
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-navy-800/80 border border-slate-700/70">
+                                <i class="fas fa-briefcase text-brand-400" aria-hidden="true"></i>
+                                <span id="hero-meta-experience">0 - 2 Years (Freshers Welcome)</span>
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-navy-800/80 border border-slate-700/70">
+                                <i class="fas fa-clock text-brand-400" aria-hidden="true"></i>
+                                <span id="hero-meta-shifts">Rotational Shifts</span>
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-800/50 text-emerald-300">
+                                <i class="fas fa-check-circle text-emerald-400" aria-hidden="true"></i>
+                                <span>Immediate Joining Available</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right CTAs -->
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a href="#apply-section"
+                            class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-heading text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-lg shadow-brand-600/30 hover:shadow-xl transition transform hover:-translate-y-0.5">
+                            <span>Apply For This Position</span>
+                            <i class="fas fa-arrow-down ml-2 text-xs" aria-hidden="true"></i>
+                        </a>
+                        <a href="careers.html"
+                            class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl font-heading text-sm font-medium text-slate-300 hover:text-white bg-navy-800/80 hover:bg-navy-800 border border-slate-700 transition">
+                            <i class="fas fa-arrow-left mr-2 text-xs" aria-hidden="true"></i>
+                            <span>All Openings</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ROLE SELECTOR / QUICK SWITCHER TABS ================= -->
+        <section class="bg-white border-b border-slate-200 sticky top-0 lg:top-[73px] z-30 shadow-sm transition-all duration-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div id="role-tabs-bar" class="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 py-3 overflow-x-auto no-scrollbar" role="tablist" aria-label="Available Positions">
+                    <!-- Populated dynamically via Strapi CMS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MAIN CONTENT (JD, SKILLS, EXPERIENCE, APPLY) ================= -->
+        <section class="py-12 sm:py-16 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    
+                    <!-- LEFT COLUMN: Detailed JD & Requirements (8 cols on lg) -->
+                    <div class="lg:col-span-8 space-y-8">
+                        
+                        <!-- DYNAMIC JOB DETAILS PANEL -->
+                        <div id="dynamic-job-panel" class="space-y-8">
+                            
+                            <!-- Role Overview Card -->
+                            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold">
+                                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                                    </div>
+                                    <h2 class="font-heading text-xl sm:text-2xl font-bold text-navy-900">
+                                        Role Overview
+                                    </h2>
+                                </div>
+                                <div id="role-overview-content" class="text-slate-600 text-sm sm:text-base leading-relaxed space-y-3">
+                                    <!-- Populated dynamically from Strapi -->
+                                </div>
+                            </div>
+
+                            <!-- Job Description & Key Responsibilities -->
+                            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold">
+                                        <i class="fas fa-list-check" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-heading text-xl sm:text-2xl font-bold text-navy-900">
+                                            Job Description & Key Responsibilities (JD)
+                                        </h2>
+                                        <p class="text-slate-500 text-xs sm:text-sm">What your day-to-day deliverables look like</p>
+                                    </div>
+                                </div>
+
+                                <ul id="job-responsibilities-list" class="space-y-3.5 text-slate-600 text-sm sm:text-base">
+                                    <!-- Populated dynamically from Strapi -->
+                                </ul>
+                            </div>
+
+                            <!-- Skills & Technical Competencies -->
+                            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold">
+                                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-heading text-xl sm:text-2xl font-bold text-navy-900">
+                                            Required Skills & Competencies
+                                        </h2>
+                                        <p class="text-slate-500 text-xs sm:text-sm">Core skills to excel in this role</p>
+                                    </div>
+                                </div>
+
+                                <div id="job-skills-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <!-- Populated dynamically from Strapi -->
+                                </div>
+                            </div>
+
+                            <!-- Experience & Qualifications -->
+                            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold">
+                                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-heading text-xl sm:text-2xl font-bold text-navy-900">
+                                            Experience & Educational Qualifications
+                                        </h2>
+                                        <p class="text-slate-500 text-xs sm:text-sm">Eligibility criteria</p>
+                                    </div>
+                                </div>
+
+                                <div id="job-qualifications-container" class="space-y-4 text-slate-600 text-sm sm:text-base">
+                                    <!-- Populated dynamically from Strapi -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- ================= PERKS & BENEFITS SECTION ================= -->
+                        <div class="bg-gradient-to-br from-navy-900 to-navy-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+                            <div class="absolute -top-16 -right-16 w-60 h-60 bg-brand-600/20 rounded-full blur-2xl pointer-events-none"></div>
+                            
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-600/30 text-brand-400 border border-brand-500/40 flex items-center justify-center font-bold">
+                                        <i class="fas fa-gift" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h2 class="font-heading text-xl sm:text-2xl font-bold text-white">
+                                            What We Offer (Perks & Benefits)
+                                        </h2>
+                                        <p class="text-slate-400 text-xs sm:text-sm">Why talented professionals choose AHAD Softtech</p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-300 text-sm">
+                                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-navy-800/60 border border-slate-700/60">
+                                        <i class="fas fa-hand-holding-dollar text-brand-400 text-base mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                                        <div>
+                                            <strong class="text-white block font-medium">Competitive Compensation</strong>
+                                            <span class="text-xs text-slate-400">Industry-benchmarked salaries with regular performance bonuses and attendance rewards.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-navy-800/60 border border-slate-700/60">
+                                        <i class="fas fa-stairs text-brand-400 text-base mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                                        <div>
+                                            <strong class="text-white block font-medium">Fast-Track Career Growth</strong>
+                                            <span class="text-xs text-slate-400">Merit-based internal promotion pathways to Team Leader, QA, and Operations Manager.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-navy-800/60 border border-slate-700/60">
+                                        <i class="fas fa-chalkboard-user text-brand-400 text-base mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                                        <div>
+                                            <strong class="text-white block font-medium">Paid Training & Onboarding</strong>
+                                            <span class="text-xs text-slate-400">Comprehensive classroom and on-the-job training conducted by domain specialists.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-navy-800/60 border border-slate-700/60">
+                                        <i class="fas fa-building text-brand-400 text-base mt-0.5 flex-shrink-0" aria-hidden="true"></i>
+                                        <div>
+                                            <strong class="text-white block font-medium">Modern Office Facility</strong>
+                                            <span class="text-xs text-slate-400">Air-conditioned campus in Mysore with high-speed fiber infrastructure and break spaces.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT COLUMN: Sticky Application Hub & HR Contact (4 cols on lg) -->
+                    <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
+                        
+                        <!-- Main Application Box -->
+                        <div id="apply-section" class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-200/80 shadow-xl shadow-brand-600/5 relative overflow-hidden">
+                            <div class="w-full h-1.5 bg-gradient-to-r from-brand-600 via-brand-500 to-amber-500 absolute top-0 left-0"></div>
+                            
+                            <div class="mb-5">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700">Quick Application</span>
+                                <h2 class="font-heading text-xl font-bold text-navy-900 mt-2">
+                                    Apply For This Role
+                                </h2>
+                                <p class="text-xs text-slate-500 mt-1">Submit your details to receive an interview call from our recruitment team.</p>
+                            </div>
+
+                            <form id="quick-job-form" class="space-y-4" onsubmit="event.preventDefault(); submitJobApplication();">
+                                <div>
+                                    <label for="applicant-role" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                        Applying For
+                                    </label>
+                                    <input type="text" id="applicant-role" readonly
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-semibold text-navy-900 focus:outline-none cursor-not-allowed">
+                                </div>
+
+                                <div>
+                                    <label for="applicant-name" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                        Full Name <span class="text-brand-600">*</span>
+                                    </label>
+                                    <input type="text" id="applicant-name" required placeholder="e.g. Rahul Sharma"
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent transition">
+                                </div>
+
+                                <div>
+                                    <label for="applicant-email" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                        Email Address <span class="text-brand-600">*</span>
+                                    </label>
+                                    <input type="email" id="applicant-email" required placeholder="e.g. rahul@example.com"
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent transition">
+                                </div>
+
+                                <div>
+                                    <label for="applicant-phone" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                        Phone / WhatsApp <span class="text-brand-600">*</span>
+                                    </label>
+                                    <input type="tel" id="applicant-phone" required placeholder="e.g. +91 9876543210"
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent transition">
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label for="applicant-exp" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                            Experience
+                                        </label>
+                                        <select id="applicant-exp"
+                                            class="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-600 transition">
+                                            <option value="Fresher">Fresher</option>
+                                            <option value="Under 1 Year">Under 1 Year</option>
+                                            <option value="1 - 2 Years">1 - 2 Years</option>
+                                            <option value="3+ Years">3+ Years</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="applicant-edu" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                            Education
+                                        </label>
+                                        <select id="applicant-edu"
+                                            class="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-600 transition">
+                                            <option value="Graduate">Graduate</option>
+                                            <option value="Post-Graduate">Post-Graduate</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="10+2 / PUC">10+2 / PUC</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="applicant-message" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                                        Resume Link / Cover Note
+                                    </label>
+                                    <textarea id="applicant-message" rows="2" placeholder="Paste Google Drive/LinkedIn resume link, or brief experience summary..."
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent transition"></textarea>
+                                </div>
+
+                                <div class="pt-2 space-y-2.5">
+                                    <button type="submit"
+                                        class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl font-heading text-xs sm:text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 hover:shadow-lg transition transform hover:-translate-y-0.5">
+                                        <i class="fas fa-paper-plane mr-2 text-xs" aria-hidden="true"></i>
+                                        <span>Submit via Official Email</span>
+                                    </button>
+
+                                    <button type="button" onclick="submitJobViaWhatsApp()"
+                                        class="w-full inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-heading text-xs sm:text-sm font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition">
+                                        <i class="fab fa-whatsapp mr-2 text-sm text-emerald-600" aria-hidden="true"></i>
+                                        <span>Fast Track on WhatsApp</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Direct HR Contact Details -->
+                        <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-4">
+                            <h3 class="font-heading text-sm font-bold text-navy-900 flex items-center gap-2">
+                                <i class="fas fa-id-card-clip text-brand-600" aria-hidden="true"></i> Recruitment Team Contacts
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                You can also directly forward your resume or walk into our Mysore office on weekdays:
+                            </p>
+
+                            <div class="space-y-3 pt-2 text-xs">
+                                <a href="mailto:careers.ahadsofttech@gmail.com" class="flex items-center gap-2.5 text-slate-700 hover:text-brand-600 font-medium transition">
+                                    <i class="fas fa-envelope text-brand-600" aria-hidden="true"></i>
+                                    <span>careers.ahadsofttech@gmail.com</span>
+                                </a>
+                                <a href="tel:+919538268786" class="flex items-center gap-2.5 text-slate-700 hover:text-brand-600 font-medium transition">
+                                    <i class="fas fa-phone-alt text-brand-600" aria-hidden="true"></i>
+                                    <span>+91 9538268786</span>
+                                </a>
+                                <div class="flex items-start gap-2.5 text-slate-600">
+                                    <i class="fas fa-location-dot text-brand-600 mt-0.5" aria-hidden="true"></i>
+                                    <span>AHAD Softtech Pvt Ltd, Hebbal / Vijayanagar, Mysore, Karnataka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= OTHER ROLES PROMO / NAVIGATION ================= -->
+        <section class="py-12 bg-white border-t border-slate-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+                    <div>
+                        <h2 class="font-heading text-xl sm:text-2xl font-bold text-navy-900">
+                            Explore Other Openings
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-500">Looking for a different role? View our other career tracks.</p>
+                    </div>
+                    <a href="careers.html" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-600 hover:text-brand-700 transition">
+                        <span>View All Openings & Culture</span>
+                        <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div id="other-openings-cards" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <!-- Populated dynamically via Strapi CMS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= CORPORATE FOOTER ================= -->
+    <footer class="bg-navy-950 text-white pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Footer Main Grid: Brand & Directory -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+                <!-- Col 1: Brand Info (2 cols on lg) -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="index.html" class="inline-block">
+                        <img src="images/brand-logo.png" alt="AHAD Softtech Logo" class="h-10 w-auto brightness-200 contrast-200">
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        AHAD Softtech Pvt Ltd is a premier Business Process Outsourcing and IT solutions provider headquartered in Mysore, India. Empowering global enterprises with human expertise and smart technology.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xs" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-xs" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                            aria-label="Twitter">
+                            <i class="fab fa-twitter text-xs" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-600 text-slate-300 hover:text-white flex items-center justify-center transition"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram text-xs" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h3 class="font-heading text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4">
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="index.html" class="hover:text-brand-400 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-400 transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Services</a></li>
+                        <li><a href="careers.html" class="hover:text-brand-400 transition font-medium text-brand-400">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div>
+                    <h3 class="font-heading text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4">
+                        Our Services
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="services.html" class="hover:text-brand-400 transition">BPO Operations</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Customer Support</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Technical Support</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Software Development</a></li>
+                        <li><a href="services.html" class="hover:text-brand-400 transition">Web Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Operations & Hours -->
+                <div>
+                    <h3 class="font-heading text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4">
+                        Operations & Hours
+                    </h3>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-clock text-brand-500 text-xs" aria-hidden="true"></i>
+                            <span>BPO Center: 24/7/365</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-calendar-alt text-brand-500 text-xs" aria-hidden="true"></i>
+                            <span>Office: Mon - Sat</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-shield-halved text-brand-500 text-xs" aria-hidden="true"></i>
+                            <span>ISO Compliant Facility</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Hub: Expanded Contact Details + Embedded Google Map -->
+            <div class="py-12 border-b border-slate-800">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Left Side: Expanded Contact Cards (6 cols on lg) -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <div>
+                            <span class="text-xs font-semibold text-brand-400 tracking-wider uppercase block mb-1">
+                                Global Headquarters & Operations Hub
+                            </span>
+                            <h4 class="font-heading text-lg sm:text-xl font-bold text-white">
+                                Connect with AHAD Softtech
+                            </h4>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/80 flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-location-dot text-base" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block mb-1">Mysore Campus Address</span>
+                                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                    AHAD Softtech Private Limited, Mysore, Karnataka 570016, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/80 flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-phone-volume text-base" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block mb-1">Direct Line</span>
+                                <a href="tel:+919538268786" class="text-sm font-semibold text-white hover:text-brand-400 transition block">
+                                    +91 9538268786
+                                </a>
+                                <span class="text-[11px] text-emerald-400 flex items-center gap-1.5 mt-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Available 24/7
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="p-4 rounded-xl bg-navy-900/80 border border-slate-800/80 flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-envelope text-base" aria-hidden="true"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block mb-1">Official Email</span>
+                                <a href="mailto:info@ahadsfottech.com"
+                                    class="text-xs sm:text-sm font-semibold text-white hover:text-brand-400 transition truncate block">
+                                    info@ahadsfottech.com
+                                </a>
+                                <a href="mailto:careers.ahadsofttech@gmail.com"
+                                    class="text-[11px] text-slate-400 hover:text-brand-400 transition truncate block mt-0.5">
+                                    careers.ahadsofttech@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Embedded Google Map (6 cols on lg) -->
+                    <div class="lg:col-span-6">
+                        <div class="bg-navy-900/90 p-2.5 rounded-2xl border border-slate-800 shadow-2xl relative overflow-hidden group">
+                            <div class="flex items-center justify-between px-3 py-2 text-xs border-b border-slate-800/80 mb-2">
+                                <span class="font-heading font-semibold text-slate-300 flex items-center gap-2">
+                                    <i class="fas fa-compass text-brand-500" aria-hidden="true"></i> Find Us on Google Maps
+                                </span>
+                                <a href="https://maps.google.com/?q=AHAD+Softtech+Private+Limited" target="_blank" rel="noopener noreferrer"
+                                    class="text-brand-400 hover:text-brand-300 text-xs font-medium inline-flex items-center gap-1 transition">
+                                    <span>Get Directions</span>
+                                    <i class="fas fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="w-full h-64 sm:h-72 rounded-xl overflow-hidden shadow-inner border border-slate-800/60 relative">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4592.787813103474!2d76.66993197569217!3d12.347657428249361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf71558a8b37ed%3A0xe5f01d77acbe688a!2sAHAD%20Softtech%20Private%20Limited!5e1!3m2!1sen!2sin!4v1788601894635!5m2!1sen!2sin"
+                                    class="w-full h-full border-0" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin" title="AHAD Softtech Private Limited Google Maps Location">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 AHAD Softtech Pvt Ltd. All Rights Reserved.</p>
+                <div class="flex items-center gap-6">
+                    <span class="hover:text-slate-400 transition">Privacy Policy</span>
+                    <span class="hover:text-slate-400 transition">Terms of Service</span>
+                    <span class="hover:text-slate-400 transition">Security & Compliance</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" type="button"
+        class="fixed bottom-20 sm:bottom-24 lg:bottom-6 right-4 sm:right-6 z-40 p-3 rounded-full bg-brand-600 text-white shadow-xl hover:bg-brand-700 transition duration-300 opacity-0 invisible translate-y-4 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        aria-label="Scroll back to top of page">
+        <i class="fas fa-arrow-up text-sm" aria-hidden="true"></i>
+    </button>
+
+    <!-- ================= FLOATING MOBILE / TABLET BOTTOM NAVIGATION BAR ================= -->
+    <nav id="mobile-bottom-bar"
+        class="fixed bottom-4 inset-x-4 max-w-sm sm:max-w-md mx-auto z-50 bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.15)] border border-slate-100 py-2.5 px-3 flex items-center justify-around lg:hidden transition-all duration-300"
+        aria-label="Mobile Bottom Navigation">
+        <!-- 1. Home -->
+        <a href="index.html"
+            class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+            <i class="fas fa-home text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+                aria-hidden="true"></i>
+            <span class="text-[11px] font-medium leading-none">Home</span>
+        </a>
+
+        <!-- 2. Services -->
+        <a href="services.html"
+            class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+            <i class="fas fa-layer-group text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+                aria-hidden="true"></i>
+            <span class="text-[11px] font-medium leading-none">Services</span>
+        </a>
+
+        <!-- 3. Careers (Active) -->
+        <a href="careers.html"
+            class="flex flex-col items-center justify-center flex-1 py-1 transition group text-brand-600 font-semibold">
+            <i class="fas fa-briefcase text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+                aria-hidden="true"></i>
+            <span class="text-[11px] leading-none">Careers</span>
+        </a>
+
+        <!-- 4. About -->
+        <a href="about.html"
+            class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+            <i class="fas fa-circle-info text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+                aria-hidden="true"></i>
+            <span class="text-[11px] font-medium leading-none">About</span>
+        </a>
+
+        <!-- 5. Contact -->
+        <a href="contact.html"
+            class="flex flex-col items-center justify-center flex-1 py-1 transition group text-slate-500 hover:text-brand-600">
+            <i class="fas fa-envelope text-base sm:text-lg mb-1 transition-transform group-hover:scale-110"
+                aria-hidden="true"></i>
+            <span class="text-[11px] font-medium leading-none">Contact</span>
+        </a>
+    </nav>
+
+    <script src="js/strapi-config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

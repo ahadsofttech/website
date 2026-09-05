@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounters();
     initBackToTop();
     initActiveNavLinks();
+    initCareersPage();
+    initCareerDetailsPage();
 });
 
 /* ==========================================================================
@@ -232,7 +234,11 @@ function initActiveNavLinks () {
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+        const isMatch = (href === currentPath) ||
+            (currentPath === '' && href === 'index.html') ||
+            (currentPath === 'career-details.html' && href === 'careers.html');
+
+        if (isMatch) {
             link.classList.add('text-brand-600', 'font-semibold');
             link.classList.remove('text-slate-500');
         }
@@ -297,4 +303,363 @@ window.sendToWhatsApp = function () {
 
     window.open(url, "_blank");
 };
+
+/* ==========================================================================
+   8. STRAPI CMS INTEGRATION: CAREERS & CAREER DETAILS
+   ========================================================================== */
+
+/**
+ * 8.1 Current Openings Dynamic Loader on careers.html
+ */
+async function initCareersPage () {
+    const grid = document.getElementById('current-openings-grid');
+    if (!grid) return;
+
+    if (typeof window.fetchJobsFromStrapi !== 'function') return;
+
+    try {
+        const jobs = await window.fetchJobsFromStrapi();
+        if (jobs && jobs.length > 0) {
+            grid.innerHTML = jobs.map((job, idx) => `
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-sm hover:border-brand-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between reveal-on-scroll"
+                    data-delay="${idx * 100}">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-700">${escapeHtml(job.jobType || 'Full-Time')}</span>
+                            <span class="text-xs text-slate-500">
+                                <i class="fas fa-map-marker-alt text-brand-600 mr-1" aria-hidden="true"></i> ${escapeHtml(job.location || 'Mysore')}
+                            </span>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-navy-900 mb-3">
+                            ${escapeHtml(job.title)}
+                        </h3>
+                        <p class="text-slate-600 text-sm font-medium mb-2">
+                            ${escapeHtml(job.department || '')}
+                        </p>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-6">
+                            ${escapeHtml(job.shortDescription || '')}
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-200/80">
+                        <a href="career-details.html?id=${encodeURIComponent(job.id)}&job=${encodeURIComponent(job.slug)}"
+                            class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl font-heading text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 shadow-md shadow-brand-600/20 transition">
+                            <span>Apply</span>
+                            <i class="fas fa-arrow-right ml-2 text-xs" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            // Re-trigger scroll animations on newly added elements
+            if (typeof initScrollAnimations === 'function') {
+                initScrollAnimations();
+            }
+        }
+    } catch (err) {
+        console.warn('[Strapi CMS] Error rendering jobs on careers page:', err);
+    }
+}
+
+/**
+ * 8.2 Job Details Dynamic Loader & Switcher on career-details.html
+ */
+let currentLoadedJobs = [];
+
+async function initCareerDetailsPage () {
+    const dynamicPanel = document.getElementById('dynamic-job-panel');
+    if (!dynamicPanel) return;
+
+    if (typeof window.fetchJobsFromStrapi !== 'function') return;
+
+    try {
+        currentLoadedJobs = await window.fetchJobsFromStrapi();
+        if (!currentLoadedJobs || currentLoadedJobs.length === 0) {
+            currentLoadedJobs = window.STRAPI_FALLBACK_JOBS;
+        }
+
+        // Determine which job to display from query params
+        const params = new URLSearchParams(window.location.search);
+        const queryId = params.get('id') || params.get('job');
+
+        let activeJob = currentLoadedJobs[0];
+        if (queryId) {
+            const found = currentLoadedJobs.find(j => 
+                String(j.id) === String(queryId) || 
+                j.slug.toLowerCase() === String(queryId).toLowerCase()
+            );
+            if (found) activeJob = found;
+        }
+
+        // Render Tabs
+        renderJobTabs(currentLoadedJobs, activeJob.id);
+
+        // Render Active Job Details
+        renderActiveJobDetails(activeJob);
+
+        // Render Other Openings
+        renderOtherOpenings(currentLoadedJobs, activeJob.id);
+
+    } catch (err) {
+        console.error('[Strapi CMS] Error initializing career details page:', err);
+    }
+}
+
+function renderJobTabs (jobs, activeId) {
+    const tabsBar = document.getElementById('role-tabs-bar');
+    if (!tabsBar) return;
+
+    tabsBar.innerHTML = jobs.map(job => {
+        const isActive = String(job.id) === String(activeId);
+        const iconClass = getRoleIcon(job.slug || job.title);
+
+        return `
+            <button type="button" role="tab" data-job-id="${escapeHtml(String(job.id))}"
+                aria-selected="${isActive ? 'true' : 'false'}"
+                class="role-tab flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-heading ${isActive ? 'font-semibold bg-brand-600 text-white shadow-sm' : 'font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-100'} transition whitespace-nowrap">
+                <i class="${iconClass} text-sm" aria-hidden="true"></i>
+                <span>${escapeHtml(job.title)}</span>
+            </button>
+        `;
+    }).join('');
+
+    // Attach click listeners to tabs
+    tabsBar.querySelectorAll('.role-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-job-id');
+            const targetJob = currentLoadedJobs.find(j => String(j.id) === String(targetId));
+            if (targetJob) {
+                renderJobTabs(currentLoadedJobs, targetJob.id);
+                renderActiveJobDetails(targetJob);
+                renderOtherOpenings(currentLoadedJobs, targetJob.id);
+            }
+        });
+    });
+}
+
+function renderActiveJobDetails (job) {
+    // 1. Hero & Badges
+    const titleEl = document.getElementById('hero-job-title');
+    const taglineEl = document.getElementById('hero-job-tagline');
+    const deptEl = document.getElementById('hero-badge-department');
+    const locEl = document.getElementById('hero-meta-location');
+    const expEl = document.getElementById('hero-meta-experience');
+    const shiftsEl = document.getElementById('hero-meta-shifts');
+    const breadcrumbRole = document.getElementById('breadcrumb-current-role');
+    const applicantRoleInput = document.getElementById('applicant-role');
+
+    if (titleEl) titleEl.textContent = job.title;
+    if (taglineEl) taglineEl.textContent = job.tagline || `${job.department || ''} • Full-Time Permanent Role based in Mysore, Karnataka.`;
+    if (deptEl) deptEl.textContent = job.department || 'Operations';
+    if (locEl) locEl.textContent = job.location || 'Mysore (On-Site)';
+    if (expEl) expEl.textContent = job.experience || '0 - 2 Years';
+    if (shiftsEl) shiftsEl.textContent = job.shifts || 'Rotational Shifts';
+    if (breadcrumbRole) breadcrumbRole.textContent = job.title;
+    if (applicantRoleInput) applicantRoleInput.value = job.title;
+
+    // 2. Role Overview
+    const overviewContainer = document.getElementById('role-overview-content');
+    if (overviewContainer) {
+        const paragraphs = (job.overview || '').split(/\r?\n\r?\n/).filter(Boolean);
+        if (paragraphs.length > 0) {
+            overviewContainer.innerHTML = paragraphs.map(p => `<p class="leading-relaxed">${escapeHtml(p)}</p>`).join('');
+        } else {
+            overviewContainer.innerHTML = `<p class="leading-relaxed">${escapeHtml(job.shortDescription || 'Exciting career opportunity at AHAD Softtech Pvt Ltd.')}</p>`;
+        }
+    }
+
+    // 3. Responsibilities (JD)
+    const respList = document.getElementById('job-responsibilities-list');
+    if (respList) {
+        respList.innerHTML = (job.responsibilities || []).map(r => `
+            <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-brand-600 mt-1 text-sm flex-shrink-0" aria-hidden="true"></i>
+                <span>${escapeHtml(r)}</span>
+            </li>
+        `).join('');
+    }
+
+    // 4. Skills & Competencies
+    const skillsContainer = document.getElementById('job-skills-container');
+    if (skillsContainer) {
+        skillsContainer.innerHTML = (job.skills || []).map(s => `
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/70">
+                <h3 class="font-heading text-sm font-bold text-navy-900 mb-1.5 flex items-center gap-2">
+                    <i class="${s.icon || 'fas fa-check-circle'} text-brand-600" aria-hidden="true"></i>
+                    <span>${escapeHtml(s.title || s.name || 'Skill')}</span>
+                </h3>
+                <p class="text-xs text-slate-600">${escapeHtml(s.desc || s.description || '')}</p>
+            </div>
+        `).join('');
+    }
+
+    // 5. Qualifications & Eligibility
+    const qualContainer = document.getElementById('job-qualifications-container');
+    if (qualContainer) {
+        const q = job.qualifications || {};
+        qualContainer.innerHTML = `
+            <div class="flex items-start gap-3">
+                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-100 text-brand-700 mt-0.5">Education</span>
+                <span>${escapeHtml(q.education || 'Any Graduate / Diploma / 10+2 with good communication.')}</span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-100 text-brand-700 mt-0.5">Experience</span>
+                <span><strong>${escapeHtml(q.experience || job.experience || '0 - 2 Years')}</strong></span>
+            </div>
+            <div class="flex items-start gap-3">
+                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-100 text-brand-700 mt-0.5">Shifts</span>
+                <span>${escapeHtml(q.shifts || job.shifts || 'Rotational day and night shifts.')}</span>
+            </div>
+        `;
+    }
+
+    // 6. Update URL query param smoothly without reloading
+    if (window.history && window.history.replaceState) {
+        const newUrl = `${window.location.pathname}?id=${encodeURIComponent(job.id)}&job=${encodeURIComponent(job.slug)}`;
+        window.history.replaceState({ id: job.id, slug: job.slug }, '', newUrl);
+    }
+}
+
+function renderOtherOpenings (jobs, currentJobId) {
+    const container = document.getElementById('other-openings-cards');
+    if (!container) return;
+
+    // Filter to other openings if more than 1, otherwise show all
+    const others = jobs.filter(j => String(j.id) !== String(currentJobId));
+    const displayList = others.length > 0 ? others : jobs;
+
+    container.innerHTML = displayList.map(j => `
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 transition flex flex-col justify-between">
+            <div>
+                <span class="text-[11px] font-semibold text-brand-600 uppercase tracking-wider block mb-1">
+                    ${escapeHtml(j.department || 'Operations')}
+                </span>
+                <h3 class="font-heading text-base font-bold text-navy-900 mb-2">
+                    ${escapeHtml(j.title)}
+                </h3>
+                <p class="text-xs text-slate-500 mb-4">
+                    ${escapeHtml(j.shortDescription || '')}
+                </p>
+            </div>
+            <button type="button" onclick="selectJobFromOther('${escapeHtml(String(j.id))}')"
+                class="inline-flex items-center text-xs font-semibold text-brand-600 hover:text-brand-700">
+                <span>View JD & Apply</span>
+                <i class="fas fa-arrow-right ml-1.5 text-[10px]" aria-hidden="true"></i>
+            </button>
+        </div>
+    `).join('');
+}
+
+window.selectJobFromOther = function (jobId) {
+    const target = currentLoadedJobs.find(j => String(j.id) === String(jobId));
+    if (target) {
+        renderJobTabs(currentLoadedJobs, target.id);
+        renderActiveJobDetails(target);
+        renderOtherOpenings(currentLoadedJobs, target.id);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+};
+
+window.switchJobRole = function (roleId) {
+    const target = currentLoadedJobs.find(j => j.slug === roleId || String(j.id) === String(roleId));
+    if (target) {
+        renderJobTabs(currentLoadedJobs, target.id);
+        renderActiveJobDetails(target);
+        renderOtherOpenings(currentLoadedJobs, target.id);
+    }
+};
+
+function getRoleIcon (slug) {
+    const s = String(slug).toLowerCase();
+    if (s.includes('tech') || s.includes('software') || s.includes('developer') || s.includes('it')) {
+        return 'fas fa-laptop-code';
+    }
+    if (s.includes('bpo') || s.includes('operation') || s.includes('process') || s.includes('data')) {
+        return 'fas fa-tasks';
+    }
+    return 'fas fa-headset';
+}
+
+function escapeHtml (str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
+// Quick Job Application via Email
+window.submitJobApplication = function () {
+    const role = document.getElementById('applicant-role')?.value || 'General Application';
+    const name = document.getElementById('applicant-name')?.value.trim() || '';
+    const email = document.getElementById('applicant-email')?.value.trim() || '';
+    const phone = document.getElementById('applicant-phone')?.value.trim() || '';
+    const exp = document.getElementById('applicant-exp')?.value || 'Fresher';
+    const edu = document.getElementById('applicant-edu')?.value || 'Graduate';
+    const message = document.getElementById('applicant-message')?.value.trim() || 'N/A';
+
+    if (!name || !email || !phone) {
+        alert('Please fill out your Full Name, Email, and Phone Number.');
+        return;
+    }
+
+    const recipient = 'careers.ahadsofttech@gmail.com';
+    const cc = 'info@ahadsfottech.com';
+    const subject = `Job Application: ${role} - ${name}`;
+    const body = `Dear AHAD Softtech Recruitment Team,
+
+I wish to apply for the position of ${role}.
+
+My Candidate Profile:
+- Full Name: ${name}
+- Email: ${email}
+- Phone / WhatsApp: ${phone}
+- Experience Level: ${exp}
+- Highest Education: ${edu}
+
+Resume / Additional Notes:
+${message}
+
+Looking forward to hearing from you.
+
+Best regards,
+${name}`;
+
+    const mailtoUrl = `mailto:${recipient}?cc=${encodeURIComponent(cc)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+};
+
+// Quick Job Application via WhatsApp
+window.submitJobViaWhatsApp = function () {
+    const role = document.getElementById('applicant-role')?.value || 'General Application';
+    const name = document.getElementById('applicant-name')?.value.trim() || '';
+    const email = document.getElementById('applicant-email')?.value.trim() || '';
+    const phone = document.getElementById('applicant-phone')?.value.trim() || '';
+    const exp = document.getElementById('applicant-exp')?.value || 'Fresher';
+    const edu = document.getElementById('applicant-edu')?.value || 'Graduate';
+    const message = document.getElementById('applicant-message')?.value.trim() || 'N/A';
+
+    if (!name || !phone) {
+        alert('Please enter your Full Name and Phone Number before contacting on WhatsApp.');
+        document.getElementById('applicant-name')?.focus();
+        return;
+    }
+
+    const whatsappNumber = "919538268786";
+    const text =
+        "💼 *Job Application — AHAD Softtech*\n\n" +
+        "🎯 *Position:* " + role + "\n" +
+        "👤 *Candidate Name:* " + name + "\n" +
+        "📧 *Email:* " + (email || "Provided upon request") + "\n" +
+        "📱 *Phone:* " + phone + "\n" +
+        "🎓 *Education:* " + edu + "\n" +
+        "⏳ *Experience:* " + exp + "\n" +
+        "📝 *Resume/Notes:* " + message;
+
+    const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+};
+
+
 
